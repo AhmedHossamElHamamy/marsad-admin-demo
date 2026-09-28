@@ -18,4 +18,4 @@ This repository is a live demo of "Marsad", a responsive Arabic HTML admin dashb
 
 Files here are flattened and modified for demo purposes only; they are not the product's source files. **No license is granted to use, copy, or redistribute this code.** To get the full files and a license, buy the product on Picalica.
 
-© Ahmed Hossam. All rights reserved. Third-party libraries (Bootstrap, Bootstrap Icons, Chart.js, Tajawal font) keep their own licenses, included as `*-LICENSE*` / `*-OFL.txt` files.
+© Ahmed Hossam. All rights reserved. Third-party libraries (Bootstrap, Bootstrap Icons, Chart.js, Tajawal font) keep their own licenses, listed in `THIRD-PARTY-NOTICES.txt`.
