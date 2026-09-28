@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>قريبًا | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="">
+<div class="zm-error position-relative zm-soon">
+  <div class="zm-auth-tools">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  <div style="max-width:620px">
+    <div class="mb-4"><a href="index.html" class="d-inline-flex align-items-center gap-2 fw-bold fs-5 text-reset"><img src="logo-mark.svg" alt="" width="36" height="36">مرصاد</a></div>
+    <h1 class="display-6 fw-bold mb-3">شيء رائع قادم قريبًا</h1>
+    <p class="text-muted mb-4">نطلق خدمتنا الجديدة قريبًا. اشترك ليصلك إشعار عند الإطلاق.</p>
+    <div class="d-flex justify-content-center gap-2 gap-sm-3 mb-4" id="soonCountdown" data-target="2026-12-31T00:00:00">
+      <div class="zm-count-box"><b class="ltr-num" data-unit="d">00</b><span>يوم</span></div><div class="zm-count-box"><b class="ltr-num" data-unit="h">00</b><span>ساعة</span></div><div class="zm-count-box"><b class="ltr-num" data-unit="m">00</b><span>دقيقة</span></div><div class="zm-count-box"><b class="ltr-num" data-unit="s">00</b><span>ثانية</span></div>
+    </div>
+    <form class="needs-validation d-flex gap-2 mx-auto" style="max-width:440px" novalidate data-zm-demo="تم الاشتراك، سنبلغك عند الإطلاق">
+      <input class="form-control" type="email" dir="ltr" placeholder="name@example.com" required aria-label="البريد الإلكتروني"><button class="btn btn-primary text-nowrap" type="submit">أبلغني</button>
+    </form>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  <script src="soon.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

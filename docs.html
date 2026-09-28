@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل الاستخدام | مرصاد</title>
+  <meta name="description" content="دليل استخدام قالب مرصاد: هيكل الملفات، تغيير الألوان والخط والشعار، الاتجاه، إضافة الصفحات، والتراخيص.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tajawal.css">
+  <link rel="stylesheet" href="bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+  <style>
+    .doc-wrap { max-width: 1180px; margin-inline: auto; padding: 2rem 1rem 4rem; }
+    .doc-toc { position: sticky; top: 1.5rem; }
+    .doc-toc a { display: block; padding: .35rem .75rem; border-radius: .5rem; color: var(--zm-text); font-size: .92rem; }
+    .doc-toc a:hover { background: var(--zm-primary-soft); color: var(--zm-primary); }
+    .doc-section { scroll-margin-top: 1.5rem; margin-bottom: 1.5rem; }
+    .doc-section h2 { font-size: 1.35rem; display: flex; align-items: center; gap: .5rem; }
+    .doc-section h2 .bi { color: var(--zm-primary); }
+    pre.zm-code { white-space: pre; margin: .75rem 0 1rem; }
+    code { color: #BE185D; }
+    .tree { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .82rem; line-height: 1.7; }
+    .doc-hero { background: linear-gradient(120deg, #0A7F72, #0F1A2A 70%, #3F3597); color: #fff; border-radius: var(--zm-radius); padding: 2.25rem; margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+    .doc-hero h1 { color: #fff; }
+    .table td, .table th { font-size: .9rem; }
+  </style>
+</head>
+<body>
+<div class="doc-wrap">
+  <header class="doc-hero">
+    <div class="d-flex align-items-center gap-3 mb-3"><img src="logo-mark.svg" alt="" width="52" height="52"><div><h1 class="h2 mb-0">دليل استخدام قالب مرصاد</h1><div class="opacity-75">Mirsad Admin — الإصدار 1.0.0</div></div></div>
+    <p class="mb-0 opacity-75">قالب لوحة تحكم عربي أصيل (RTL) مع دعم كامل لاتجاه LTR والإنجليزية، ووضع داكن، و37 صفحة جاهزة + 4 قوالب بريد HTML مبنية على HTML5 وBootstrap 5.3 وJavaScript خالصة وChart.js.</p>
+  </header>
+
+  <div class="row g-4">
+    <aside class="col-lg-3 d-none d-lg-block">
+      <nav class="doc-toc card p-2" aria-label="فهرس الدليل">
+        <a href="#start">البدء السريع</a>
+        <a href="#structure">هيكل الملفات</a>
+        <a href="#pages">الصفحات المتضمنة</a>
+        <a href="#colors">تغيير الألوان</a>
+        <a href="#font">تغيير الخط</a>
+        <a href="#logo">تغيير الشعار والاسم</a>
+        <a href="#direction">الاتجاه واللغة (RTL/LTR)</a>
+        <a href="#dark">الوضع الداكن</a>
+        <a href="#add-page">إضافة صفحة جديدة</a>
+        <a href="#charts">الرسوم البيانية</a>
+        <a href="#data">ربط بيانات حقيقية</a>
+        <a href="#browsers">المتصفحات المدعومة</a>
+        <a href="#credits">المصادر والتراخيص</a>
+        <a href="#changelog">سجل التغييرات</a>
+        <a href="#support">الدعم الفني</a>
+      </nav>
+    </aside>
+    <main class="col-lg-9">
+
+      <section class="card doc-section" id="start"><div class="card-body p-4">
+        <h2><i class="bi bi-rocket-takeoff"></i> البدء السريع</h2>
+        <ol class="mb-3">
+          <li>فك ضغط الملف ثم افتح <code>index.html</code> مباشرة في المتصفح — لا يحتاج القالب إلى أي تثبيت أو أدوات بناء.</li>
+          <li>للتطوير المريح يُفضَّل تشغيل خادم محلي بسيط من مجلد القالب، مثل:</li>
+        </ol>
+<pre class="zm-code">python -m http.server 8080
+# ثم افتح http://localhost:8080</pre>
+        <p class="mb-0">أو استخدم إضافة <b>Live Server</b> في محرر VS Code. كل المسارات نسبية، لذا يمكن رفع المجلد كما هو إلى أي استضافة أو دمجه في مشروع Laravel أو Django أو ASP.NET أو غيرها.</p>
+      </div></section>
+
+      <section class="card doc-section" id="structure"><div class="card-body p-4">
+        <h2><i class="bi bi-folder2-open"></i> هيكل الملفات</h2>
+<pre class="zm-code tree">admin-dashboard-rtl/
+├── index.html … 500.html        ← 37 صفحة HTML مستقلة
+├── emails/                     ← 4 قوالب بريد HTML (ترحيب، تأكيد طلب، فاتورة، استعادة كلمة المرور)
+├── assets/
+│   ├── css/app.css              ← كل تنسيقات القالب ومتغيرات الألوان (معلّق بالعربية)
+│   ├── js/init.js               ← يطبّق الاتجاه والوضع الداكن قبل رسم الصفحة
+│   ├── js/app.js                ← السكربت الرئيسي (القائمة، الوضع الداكن، الاتجاه، الإشعارات، إعدادات الرسوم)
+│   ├── js/i18n.js               ← قاموس الترجمة من العربية إلى الإنجليزية
+│   ├── js/pages/*.js            ← سكربت خاص بكل صفحة (dashboard.js، users.js، calendar.js …)
+│   ├── img/                     ← الشعار والأيقونة (SVG)
+│   └── vendor/                  ← Bootstrap 5.3.3 و Bootstrap Icons 1.11.3 و Chart.js 4.4.4 وخط Tajawal مع ملفات الترخيص
+├── docs/index.html              ← هذا الدليل
+├── README.md · CHANGELOG.md · LICENSE.txt</pre>
+        <p class="mb-0">كل صفحة تتكون من: الشريط الجانبي <code>.zm-sidebar</code>، الشريط العلوي <code>.zm-topbar</code>، ومنطقة المحتوى <code>.zm-content</code> داخل <code>.zm-main</code>. صفحات الدخول والأخطاء مستقلة بدون قائمة جانبية.</p>
+      </div></section>
+
+      <section class="card doc-section" id="pages"><div class="card-body p-4">
+        <h2><i class="bi bi-files"></i> الصفحات المتضمنة (37 صفحة)</h2>
+        <div class="table-responsive"><table class="table table-sm align-middle">
+          <thead><tr><th>الملف</th><th>الوصف</th></tr></thead>
+          <tbody>
+            <tr><td><code>index.html</code></td><td>لوحة التحليلات: مؤشرات أداء، 4 رسوم بيانية، أحدث الطلبات، آخر النشاطات</td></tr>
+            <tr><td><code>ecommerce.html</code></td><td>لوحة المتجر: المبيعات والطلبات، الفئات، المنتجات الأكثر مبيعًا، المدن، التقييمات، نافذة إضافة منتج</td></tr>
+            <tr><td><code>crm.html</code></td><td>إدارة العملاء: مسار الصفقات (كانبان بالسحب والإفلات)، العملاء المحتملون، المهام</td></tr>
+            <tr><td><code>invoices.html</code> · <code>invoice-detail.html</code></td><td>قائمة الفواتير مع التصفية والبحث، وفاتورة ضريبية قابلة للطباعة</td></tr>
+            <tr><td><code>users.html</code> · <code>profile.html</code></td><td>قائمة مستخدمين مع بحث وتصفية وترتيب وترقيم صفحات، وملف شخصي بتبويبات</td></tr>
+            <tr><td><code>settings.html</code></td><td>إعدادات الحساب والأمان والإشعارات والمظهر والفوترة مع التحقق من النماذج</td></tr>
+            <tr><td><code>calendar.html</code></td><td>تقويم شهري بـ JavaScript خالصة مع إضافة الأحداث والتصنيفات</td></tr>
+            <tr><td><code>inbox.html</code> · <code>chat.html</code></td><td>بريد وارد بثلاثة أقسام، وتطبيق محادثات تفاعلي</td></tr>
+            <tr><td><code>pricing.html</code> · <code>faq.html</code></td><td>الباقات مع التبديل الشهري/السنوي، ومركز مساعدة مع بحث فوري</td></tr>
+            <tr><td><code>ui-kit.html</code> · <code>tables.html</code> · <code>charts.html</code></td><td>مكتبة المكونات، أنماط الجداول، و10 أنواع من الرسوم البيانية</td></tr>
+            <tr><td><code>login.html</code> · <code>register.html</code> · <code>forgot-password.html</code></td><td>صفحات المصادقة مع التحقق وإظهار كلمة المرور</td></tr>
+            <tr><td><code>404.html</code> · <code>500.html</code> · <code>blank.html</code></td><td>صفحات الأخطاء وصفحة فارغة لبدء صفحاتك</td></tr>
+            <tr><td><code>orders.html</code> · <code>order-detail.html</code></td><td>جديد: الطلبات مع تبويبات الحالة والبحث، وتفاصيل الطلب مع التتبع والعميل والدفع والشحن</td></tr>
+            <tr><td><code>products.html</code> · <code>product-add.html</code></td><td>جديد: شبكة منتجات مع البحث والتصفية بالفئة، ونموذج إضافة منتج (رفع صور بمعاينة، تسعير وهامش، متغيرات، معاينة SEO)</td></tr>
+            <tr><td><code>customers.html</code></td><td>جديد: قائمة العملاء بالشرائح (كبار العملاء، جدد، غير نشطين) والبحث</td></tr>
+            <tr><td><code>invoice-create.html</code></td><td>جديد: إنشاء فاتورة ببنود ديناميكية وحساب الخصم والضريبة والإجمالي تلقائيًا</td></tr>
+            <tr><td><code>projects.html</code> · <code>employees.html</code> · <code>file-manager.html</code></td><td>جديد: المشاريع والمهام، الموارد البشرية وطلبات الإجازة، ومدير الملفات</td></tr>
+            <tr><td><code>notifications.html</code> · <code>activity-log.html</code> · <code>email-templates.html</code></td><td>جديد: مركز الإشعارات بالتصفية، سجل النشاط والأمان، ومعاينة قوالب البريد</td></tr>
+            <tr><td><code>lock-screen.html</code> · <code>maintenance.html</code> · <code>coming-soon.html</code></td><td>جديد: شاشة القفل، صفحة الصيانة، وصفحة «قريبًا» بعداد تنازلي واشتراك</td></tr>
+          </tbody>
+        </table></div>
+      </div></section>
+
+      <section class="card doc-section" id="colors"><div class="card-body p-4">
+        <h2><i class="bi bi-palette"></i> تغيير الألوان</h2>
+        <p>كل ألوان القالب معرّفة كمتغيرات CSS في أعلى الملف <code>assets/css/app.css</code> (القسم 01 للوضع الفاتح والقسم 02 للوضع الداكن). لتغيير هوية القالب بالكامل عدّل اللون الأساسي وقيمته بصيغة RGB:</p>
+<pre class="zm-code">html:root {
+  --zm-primary: #2563EB;        /* اللون الأساسي */
+  --zm-primary-rgb: 37, 99, 235; /* نفس اللون بصيغة RGB */
+  --zm-primary-hover: #1D4ED8;   /* لون التمرير */
+}</pre>
+        <p>تنتقل القيمة تلقائيًا إلى أزرار Bootstrap والروابط والتبويبات والترقيم ومربعات الاختيار والأشرطة. ألوان الرسوم البيانية موجودة في <code>Mirsad.palette</code> داخل <code>assets/js/app.js</code>.</p>
+        <p>من صفحة <b>الإعدادات &gt; المظهر</b> يمكنك تجربة ألوان مختلفة مباشرة قبل اعتمادها.</p>
+        <p class="mb-0"><b>جديد في 2.0:</b> زر <b>التخصيص</b> العائم في كل صفحة يفتح لوحة جانبية فيها 8 ألوان جاهزة (teal، blue، indigo، violet، rose، orange، emerald، cyan)، والوضع الفاتح/الداكن، والاتجاه، وحالة القائمة الجانبية، وتُحفظ الاختيارات في المتصفح. لجعل لون جاهز هو الافتراضي أضف <code>data-zm-color="indigo"</code> إلى وسم <code>&lt;html&gt;</code>، ولإضافة لون جديد انسخ أحد أسطر <code>html[data-zm-color=...]</code> في القسم 15 من <code>app.css</code>.</p>
+      </div></section>
+
+      <section class="card doc-section" id="font"><div class="card-body p-4">
+        <h2><i class="bi bi-fonts"></i> تغيير الخط</h2>
+        <p>يستخدم القالب خط <b>Tajawal</b> (من Google Fonts، بترخيص SIL Open Font License 1.1 — مجاني للاستخدام التجاري). ملفات الخط <b>مضمّنة محليًا</b> بصيغة woff2 في <code>assets/vendor/tajawal/</code> (الأوزان 300–900، للحروف العربية واللاتينية)، فيعمل القالب بدون إنترنت ولا يرسل أي طلبات لخوادم خارجية. يُحمَّل عبر السطر التالي في رأس كل صفحة:</p>
+<pre class="zm-code">&lt;link rel="stylesheet" href="assets/vendor/tajawal/tajawal.css"&gt;</pre>
+        <p>لاستبداله بخط آخر مثل Cairo أو IBM Plex Sans Arabic، إما عبر Google Fonts:</p>
+<pre class="zm-code">&lt;!-- 1) في رأس كل صفحة استبدل سطر tajawal.css بـ --&gt;
+&lt;link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&amp;display=swap"&gt;
+
+/* 2) في assets/css/app.css */
+--zm-font: "Cairo", system-ui, sans-serif;</pre>
+        <p class="mb-0">أو محليًا: ضع ملفات woff2 للخط الجديد في مجلد مشابه وعرّفها بـ <code>@font-face</code> على غرار <code>tajawal.css</code>. المتغير <code>--zm-font</code> يُطبَّق على الواجهة كلها، ويقرأه <code>app.js</code> تلقائيًا لخط الرسوم البيانية.</p>
+      </div></section>
+
+      <section class="card doc-section" id="logo"><div class="card-body p-4">
+        <h2><i class="bi bi-badge-tm"></i> تغيير الشعار والاسم</h2>
+        <ul class="mb-0">
+          <li>استبدل الملف <code>assets/img/logo-mark.svg</code> بشعارك (يُفضَّل مربع 40×40 بصيغة SVG أو PNG)، و<code>assets/img/favicon.svg</code> لأيقونة المتصفح.</li>
+          <li>اسم «مرصاد» يظهر داخل العنصر <code>.zm-brand</code> في كل صفحة؛ استخدم «بحث واستبدال» في محررك على كل ملفات HTML لتغييره دفعة واحدة، وكذلك في عنوان <code>&lt;title&gt;</code>.</li>
+          <li>ملف <code>assets/img/logo.svg</code> نسخة أفقية كاملة يمكن استخدامها في الفواتير والمطبوعات.</li>
+        </ul>
+      </div></section>
+
+      <section class="card doc-section" id="direction"><div class="card-body p-4">
+        <h2><i class="bi bi-translate"></i> الاتجاه واللغة (RTL / LTR)</h2>
+        <p>القالب عربي أولًا (RTL). زر <b>EN</b> في الشريط العلوي يحوّل الواجهة إلى LTR والإنجليزية ويحفظ الاختيار في <code>localStorage</code> (مع حماية <code>try/catch</code> إذا كان التخزين معطلًا).</p>
+        <ul>
+          <li><code>assets/js/init.js</code> يقرأ الاختيار قبل رسم الصفحة، فيضبط <code>dir</code> و<code>lang</code> ويبدّل ملف Bootstrap من <code>bootstrap.rtl.min.css</code> إلى <code>bootstrap.min.css</code>.</li>
+          <li>تنسيقات القالب مكتوبة بخصائص CSS المنطقية (<code>margin-inline-start</code>، <code>inset-inline-end</code>…) فتعمل في الاتجاهين دون تكرار.</li>
+          <li>الترجمة تتم من القاموس <code>assets/js/i18n.js</code> بالشكل <code>"النص العربي": "English text"</code>. أي نص غير موجود في القاموس يبقى كما هو. العناصر التي تحمل السمة <code>data-no-i18n</code> (مثل الأسماء والبيانات التجريبية) لا تُترجم.</li>
+          <li>لبرمجة الاتجاه يدويًا: <code>Mirsad.setDir('ltr')</code> أو <code>Mirsad.setDir('rtl')</code>.</li>
+        </ul>
+        <p class="mb-0">لإطلاق مشروع إنجليزي فقط: غيّر في كل صفحة <code>dir="ltr" lang="en"</code> ورابط Bootstrap إلى <code>bootstrap.min.css</code>، أو ببساطة اضبط القيمة الافتراضية في <code>init.js</code>. لعكس محاور الرسوم الزمنية أو إبقائها من اليسار لليمين في RTL استخدم الخيار <code>Mirsad.config.mirrorChartsInRTL</code>.</p>
+      </div></section>
+
+      <section class="card doc-section" id="dark"><div class="card-body p-4">
+        <h2><i class="bi bi-moon-stars"></i> الوضع الداكن</h2>
+        <p>يعتمد على ميزة <code>data-bs-theme="dark"</code> في Bootstrap 5.3 مع متغيرات القالب في القسم 02 من <code>app.css</code>. زر القمر في الشريط العلوي يبدّل الوضع ويحفظه، والرسوم البيانية تُحدَّث ألوانها تلقائيًا.</p>
+<pre class="zm-code">Mirsad.setTheme('dark');   // أو 'light'
+document.addEventListener('mirsad:theme', e =&gt; console.log(e.detail));</pre>
+      </div></section>
+
+      <section class="card doc-section" id="add-page"><div class="card-body p-4">
+        <h2><i class="bi bi-file-earmark-plus"></i> إضافة صفحة جديدة</h2>
+        <ol class="mb-0">
+          <li>انسخ <code>blank.html</code> وأعد تسميته (مثلًا <code>reports.html</code>).</li>
+          <li>غيّر العنوان في <code>&lt;title&gt;</code> و<code>&lt;h1&gt;</code> ومسار التنقل (breadcrumb).</li>
+          <li>أضف رابط الصفحة في القائمة الجانبية <code>.zm-nav</code> في كل الصفحات، مع الصنف <code>active</code> و<code>aria-current="page"</code> في الصفحة نفسها:
+<pre class="zm-code">&lt;a class="zm-nav-link" href="reports.html"&gt;&lt;i class="bi bi-file-bar-graph"&gt;&lt;/i&gt;&lt;span&gt;التقارير&lt;/span&gt;&lt;/a&gt;</pre></li>
+          <li>إذا احتجت سكربتًا خاصًا أنشئ <code>assets/js/pages/reports.js</code> وأضفه بعد <code>app.js</code>. للرسوم البيانية أضف <code>chart.umd.min.js</code> قبل <code>i18n.js</code>.</li>
+          <li>(اختياري) أضف ترجمة العناوين الجديدة في <code>i18n.js</code>.</li>
+        </ol>
+      </div></section>
+
+      <section class="card doc-section" id="charts"><div class="card-body p-4">
+        <h2><i class="bi bi-bar-chart-line"></i> الرسوم البيانية</h2>
+        <p>الرسوم مبنية على Chart.js 4. يضبط <code>app.js</code> الخط والألوان والتلميحات والاتجاه تلقائيًا، وتوفر الدوال المساعدة:</p>
+        <ul class="mb-0">
+          <li><code>Mirsad.axes()</code> محاور تحترم اتجاه الواجهة.</li>
+          <li><code>Mirsad.gradient(color, from, to)</code> تعبئة متدرجة للرسوم المساحية.</li>
+          <li><code>Mirsad.palette</code> ألوان الرسوم، و<code>Mirsad.t()</code> لترجمة التسميات.</li>
+          <li>أمثلة لعشرة أنواع في <code>assets/js/pages/charts.js</code>.</li>
+        </ul>
+      </div></section>
+
+      <section class="card doc-section" id="data"><div class="card-body p-4">
+        <h2><i class="bi bi-database"></i> ربط بيانات حقيقية</h2>
+        <p>جميع البيانات في القالب وهمية لأغراض العرض. أمثلة الربط:</p>
+<pre class="zm-code">// users.js — استبدل مصفوفة USERS ببيانات من واجهتك البرمجية
+fetch('/api/users').then(r =&gt; r.json()).then(list =&gt; { USERS = list; render(); });</pre>
+        <p class="mb-0">النماذج التي تحمل السمة <code>data-zm-demo</code> تعرض إشعار نجاح فقط؛ احذف السمة واضبط <code>action</code> و<code>method</code> لإرسالها إلى الخادم. التحقق من الحقول يعمل عبر صنف <code>needs-validation</code> من Bootstrap.</p>
+      </div></section>
+
+      <section class="card doc-section" id="browsers"><div class="card-body p-4">
+        <h2><i class="bi bi-browser-chrome"></i> المتصفحات المدعومة</h2>
+        <p class="mb-0">أحدث إصدارين من Chrome وEdge وFirefox وSafari (سطح المكتب والجوال). التصميم متجاوب بالكامل من عرض 360 بكسل حتى الشاشات الكبيرة. السحب والإفلات في لوحة الصفقات يعمل بالفأرة على أجهزة سطح المكتب.</p>
+      </div></section>
+
+      <section class="card doc-section" id="credits"><div class="card-body p-4">
+        <h2><i class="bi bi-award"></i> المصادر والتراخيص</h2>
+        <p>تصميم القالب وكوده (HTML وCSS وJavaScript) والشعار والأيقونة أصلية بالكامل. المكتبات المستخدمة مفتوحة المصدر وتسمح بالاستخدام التجاري، وملفات تراخيصها مرفقة داخل <code>assets/vendor/</code>:</p>
+        <div class="table-responsive"><table class="table table-sm align-middle">
+          <thead><tr><th>المصدر</th><th>الإصدار</th><th>الترخيص</th></tr></thead>
+          <tbody>
+            <tr><td>Bootstrap (CSS RTL + JS bundle مع Popper)</td><td>5.3.3</td><td>MIT</td></tr>
+            <tr><td>Bootstrap Icons (خط الأيقونات)</td><td>1.11.3</td><td>MIT</td></tr>
+            <tr><td>Chart.js</td><td>4.4.4</td><td>MIT</td></tr>
+            <tr><td>خط Tajawal — Boutros International عبر Google Fonts (ملفات woff2 مضمّنة)</td><td>—</td><td>SIL Open Font License 1.1 (<code>assets/vendor/tajawal/OFL.txt</code>)</td></tr>
+          </tbody>
+        </table></div>
+        <p class="mb-0">لا يحتوي القالب على صور فوتوغرافية أو صور محمية بحقوق نشر؛ الصور الرمزية مولّدة من الأحرف الأولى، وكل الأسماء والشركات والأرقام في البيانات التجريبية وهمية.</p>
+      </div></section>
+
+      <section class="card doc-section" id="changelog"><div class="card-body p-4">
+        <h2><i class="bi bi-clock-history"></i> سجل التغييرات</h2>
+        <h3 class="h6 fw-bold">الإصدار 2.0.0 — سبتمبر 2026</h3>
+        <ul class="mb-3">
+          <li>الاسم الجديد: مرصاد، مع شعار جديد.</li>
+          <li>15 صفحة جديدة (37 صفحة إجمالًا): الطلبات، تفاصيل الطلب، المنتجات، إضافة منتج، العملاء، إنشاء فاتورة، المشاريع والمهام، الموارد البشرية، مدير الملفات، الإشعارات، سجل النشاط، قوالب البريد، شاشة القفل، الصيانة، قريبًا.</li>
+          <li>4 قوالب بريد HTML عربية في مجلد <code>emails/</code>.</li>
+          <li>لوحة تخصيص بـ 8 ألوان جاهزة مع الوضع والاتجاه وحالة القائمة.</li>
+          <li>نسخة عرض مباشر (Live Preview) جاهزة للاستضافة.</li>
+        </ul>
+        <h3 class="h6 fw-bold">الإصدار 1.0.0 — 28 سبتمبر 2026</h3>
+        <ul class="mb-2">
+          <li>الإصدار الأول: 22 صفحة HTML مستقلة (لوحات، تطبيقات، صفحات عامة، مصادقة، أخطاء).</li>
+          <li>RTL أولًا مع تبديل فوري إلى LTR والإنجليزية عبر قاموس ترجمة قابل للتوسيع.</li>
+          <li>وضع داكن/فاتح يُحفظ في المتصفح، مع تحديث تلقائي لألوان الرسوم البيانية.</li>
+          <li>شريط جانبي قابل للطي وقائمة جوال منزلقة وتصميم متجاوب بالكامل.</li>
+          <li>10 أنواع من الرسوم البيانية، جداول بالبحث والتصفية والترتيب والترقيم، تقويم، كانبان بالسحب والإفلات، بريد ومحادثات.</li>
+          <li>خط Tajawal وأيقونات Bootstrap Icons مضمّنة محليًا — يعمل القالب بدون إنترنت.</li>
+        </ul>
+        <p class="mb-0 small text-body-secondary">السجل الكامل في الملف <code>CHANGELOG.md</code>.</p>
+      </div></section>
+
+      <section class="card doc-section" id="support"><div class="card-body p-4">
+        <h2><i class="bi bi-headset"></i> الدعم الفني</h2>
+        <p class="mb-0">يشمل الشراء دعمًا فنيًا لمدة 6 أشهر عبر نظام الرسائل في منصة بيكاليكا، للإجابة عن أسئلة الاستخدام وإصلاح أي أخطاء في القالب. لا يشمل الدعم تخصيص التصميم أو برمجة ميزات جديدة أو ربط القالب بأنظمة خلفية.</p>
+      </div></section>
+
+    </main>
+  </div>
+</div>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

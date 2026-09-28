@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صفحة فارغة | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<aside class="zm-sidebar" id="zmSidebar" aria-label="القائمة الجانبية">
+  <a class="zm-brand" href="index.html"><img src="logo-mark.svg" alt="" width="38" height="38"><span class="zm-brand-text">مرصاد<small>MIRSAD ADMIN</small></span></a>
+  <nav class="zm-nav" aria-label="القائمة الرئيسية">
+<div class="zm-nav-title">الرئيسية</div>
+<a class="zm-nav-link" href="index.html"><i class="bi bi-grid-1x2"></i><span>لوحة التحليلات</span></a>
+<a class="zm-nav-link" href="ecommerce.html"><i class="bi bi-bag-check"></i><span>التجارة الإلكترونية</span></a>
+<a class="zm-nav-link" href="crm.html"><i class="bi bi-kanban"></i><span>إدارة العملاء</span></a>
+<div class="zm-nav-title">المتجر</div>
+<a class="zm-nav-link" href="orders.html"><i class="bi bi-cart3"></i><span>الطلبات</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">24</span></a>
+<a class="zm-nav-link" href="order-detail.html"><i class="bi bi-truck"></i><span>تفاصيل الطلب</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-products" role="button" aria-expanded="false" aria-controls="nav-products"><i class="bi bi-box-seam"></i><span>المنتجات</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-products"><div class="zm-subnav">
+<a class="zm-nav-link" href="products.html"><span>قائمة المنتجات</span></a>
+<a class="zm-nav-link" href="product-add.html"><span>إضافة منتج</span></a>
+</div></div>
+<a class="zm-nav-link" href="customers.html"><i class="bi bi-people"></i><span>العملاء</span></a>
+<div class="zm-nav-title">التطبيقات</div>
+<a class="zm-nav-link" href="inbox.html"><i class="bi bi-envelope"></i><span>البريد الوارد</span><span class="badge rounded-pill zm-nav-badge bg-danger">12</span></a>
+<a class="zm-nav-link" href="chat.html"><i class="bi bi-chat-dots"></i><span>المحادثات</span></a>
+<a class="zm-nav-link" href="calendar.html"><i class="bi bi-calendar3"></i><span>التقويم</span></a>
+<a class="zm-nav-link" href="projects.html"><i class="bi bi-list-check"></i><span>المشاريع والمهام</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">جديد</span></a>
+<a class="zm-nav-link" href="file-manager.html"><i class="bi bi-folder2-open"></i><span>مدير الملفات</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-invoices" role="button" aria-expanded="false" aria-controls="nav-invoices"><i class="bi bi-receipt"></i><span>الفواتير</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-invoices"><div class="zm-subnav">
+<a class="zm-nav-link" href="invoices.html"><span>قائمة الفواتير</span></a>
+<a class="zm-nav-link" href="invoice-detail.html"><span>تفاصيل الفاتورة</span></a>
+<a class="zm-nav-link" href="invoice-create.html"><span>إنشاء فاتورة</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-users" role="button" aria-expanded="false" aria-controls="nav-users"><i class="bi bi-person-gear"></i><span>المستخدمون</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-users"><div class="zm-subnav">
+<a class="zm-nav-link" href="users.html"><span>قائمة المستخدمين</span></a>
+<a class="zm-nav-link" href="profile.html"><span>الملف الشخصي</span></a>
+</div></div>
+<a class="zm-nav-link" href="employees.html"><i class="bi bi-person-badge"></i><span>الموارد البشرية</span></a>
+<div class="zm-nav-title">الصفحات</div>
+<a class="zm-nav-link" href="settings.html"><i class="bi bi-gear"></i><span>الإعدادات</span></a>
+<a class="zm-nav-link" href="notifications.html"><i class="bi bi-bell"></i><span>الإشعارات</span></a>
+<a class="zm-nav-link" href="activity-log.html"><i class="bi bi-clock-history"></i><span>سجل النشاط</span></a>
+<a class="zm-nav-link" href="email-templates.html"><i class="bi bi-envelope-paper"></i><span>قوالب البريد</span></a>
+<a class="zm-nav-link" href="pricing.html"><i class="bi bi-tags"></i><span>الأسعار والباقات</span></a>
+<a class="zm-nav-link" href="faq.html"><i class="bi bi-question-circle"></i><span>مركز المساعدة</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-auth" role="button" aria-expanded="false" aria-controls="nav-auth"><i class="bi bi-shield-lock"></i><span>المصادقة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-auth"><div class="zm-subnav">
+<a class="zm-nav-link" href="login.html"><span>تسجيل الدخول</span></a>
+<a class="zm-nav-link" href="register.html"><span>إنشاء حساب</span></a>
+<a class="zm-nav-link" href="forgot-password.html"><span>استعادة كلمة المرور</span></a>
+<a class="zm-nav-link" href="lock-screen.html"><span>شاشة القفل</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-errors" role="button" aria-expanded="false" aria-controls="nav-errors"><i class="bi bi-exclamation-octagon"></i><span>صفحات خاصة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-errors"><div class="zm-subnav">
+<a class="zm-nav-link" href="404.html"><span>خطأ 404</span></a>
+<a class="zm-nav-link" href="500.html"><span>خطأ 500</span></a>
+<a class="zm-nav-link" href="maintenance.html"><span>صيانة</span></a>
+<a class="zm-nav-link" href="coming-soon.html"><span>قريبًا</span></a>
+</div></div>
+<a class="zm-nav-link active" href="blank.html" aria-current="page"><i class="bi bi-file-earmark"></i><span>صفحة فارغة</span></a>
+<div class="zm-nav-title">واجهة المستخدم</div>
+<a class="zm-nav-link" href="ui-kit.html"><i class="bi bi-palette"></i><span>مكونات الواجهة</span></a>
+<a class="zm-nav-link" href="tables.html"><i class="bi bi-table"></i><span>الجداول</span></a>
+<a class="zm-nav-link" href="charts.html"><i class="bi bi-bar-chart-line"></i><span>الرسوم البيانية</span></a>
+  </nav>
+  <div class="zm-sidebar-footer">
+    <div class="zm-upgrade">
+      <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars text-warning"></i><strong class="text-white">الباقة الاحترافية</strong></div>
+      <div class="progress zm-progress-thin mb-2" role="progressbar" aria-label="المساحة المستخدمة" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:72%;background:#2DD4BF"></div></div>
+      <div class="d-flex justify-content-between small"><span>المساحة المستخدمة</span><span class="ltr-num">72%</span></div>
+    </div>
+  </div>
+</aside>
+<div class="zm-backdrop" aria-hidden="true"></div>
+<div class="zm-main">
+  <header class="zm-topbar">
+    <button class="zm-icon-btn" type="button" data-zm-toggle="sidebar" aria-label="إظهار أو إخفاء القائمة" aria-controls="zmSidebar"><i class="bi bi-list"></i></button>
+    <div class="zm-search" role="search">
+      <i class="bi bi-search"></i>
+      <input id="zmSearch" type="search" class="form-control" placeholder="ابحث عن صفحة..." aria-label="بحث سريع" autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" title="تبديل الاتجاه واللغة" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" title="الوضع الداكن / الفاتح" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+      <div class="dropdown zm-hide-xs">
+        <button class="zm-icon-btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="الإشعارات"><i class="bi bi-bell"></i><span class="zm-dot"></span></button>
+        <div class="dropdown-menu dropdown-menu-end zm-notif-list">
+          <div class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom"><strong>الإشعارات</strong><span class="badge bg-soft-primary rounded-pill">4 جديدة</span></div>
+          <a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-primary" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-bag-check"></i></span><span class="min-w-0"><span class="d-block fw-bold small">طلب جديد #10248</span><span class="d-block small text-muted">من متجر لؤلؤة الخليج</span><span class="d-block fs-7 text-muted">قبل 5 دقائق</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-accent" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-person-plus"></i></span><span class="min-w-0"><span class="d-block fw-bold small">انضم عضو جديد</span><span class="d-block small text-muted">ريم الدوسري انضمت إلى فريق المبيعات</span><span class="d-block fs-7 text-muted">قبل 40 دقيقة</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-warning" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-exclamation-triangle"></i></span><span class="min-w-0"><span class="d-block fw-bold small">مخزون منخفض</span><span class="d-block small text-muted">كرسي مكتبي مريح — بقي 4 قطع</span><span class="d-block fs-7 text-muted">قبل ساعتين</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-success" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-receipt"></i></span><span class="min-w-0"><span class="d-block fw-bold small">تم سداد فاتورة</span><span class="d-block small text-muted">الفاتورة INV-2031 بقيمة 8,400 ر.س</span><span class="d-block fs-7 text-muted">أمس</span></span></a>
+          <a href="#" class="d-block text-center py-2 small fw-bold">عرض كل الإشعارات</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="zm-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="قائمة الحساب">
+          <span class="avatar avatar-sm avatar-solid" style="--av:#3B82F6" aria-hidden="true">س‌ق</span>
+          <span class="zm-user-meta d-none d-md-block text-start lh-sm"><span class="d-block fw-bold small" data-no-i18n>سارة القحطاني</span><span class="d-block fs-7 text-muted">مديرة النظام</span></span>
+          <i class="bi bi-chevron-down fs-7 text-muted d-none d-md-inline"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-credit-card me-2"></i>الفوترة</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="zm-content" id="main">
+    <div class="zm-page-header">
+      <div>
+        <h1>صفحة فارغة</h1>
+        <nav aria-label="مسار التنقل"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li><li class="breadcrumb-item active" aria-current="page">صفحة فارغة</li></ol></nav>
+      </div>
+      
+    </div>
+    <!-- ضع محتوى صفحتك هنا — Put your page content here -->
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">عنوان البطاقة</h2></div>
+      <div class="card-body">
+        <p class="text-muted mb-0">هذه صفحة فارغة جاهزة لتبدأ منها صفحاتك الجديدة. انسخ هذا الملف وأعد تسميته ثم أضف رابطه إلى القائمة الجانبية.</p>
+      </div>
+    </div>
+  </main>
+  <footer class="zm-footer">
+    <span>© <span data-zm-year>2026</span> مرصاد — جميع الحقوق محفوظة</span>
+    <span>صُمم بعناية للمشاريع العربية <i class="bi bi-heart-fill text-danger"></i></span>
+  </footer>
+</div>
+<button class="zm-customizer-fab" type="button" data-bs-toggle="offcanvas" data-bs-target="#zmCustomizer" aria-controls="zmCustomizer" aria-label="تخصيص الألوان والوضع والاتجاه"><i class="bi bi-palette2"></i></button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="zmCustomizer" aria-labelledby="zmCustomizerTitle" style="width:320px">
+  <div class="offcanvas-header border-bottom"><h5 class="offcanvas-title" id="zmCustomizerTitle">تخصيص الواجهة</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button></div>
+  <div class="offcanvas-body">
+    <div class="fw-bold small mb-2">لون الواجهة</div><div class="zm-presets mb-4"><button type="button" class="zm-preset" data-zm-preset="teal" style="--c:#0A7F72" aria-label="teal"></button><button type="button" class="zm-preset" data-zm-preset="blue" style="--c:#2563EB" aria-label="blue"></button><button type="button" class="zm-preset" data-zm-preset="indigo" style="--c:#4F46E5" aria-label="indigo"></button><button type="button" class="zm-preset" data-zm-preset="violet" style="--c:#7C3AED" aria-label="violet"></button><button type="button" class="zm-preset" data-zm-preset="rose" style="--c:#E11D48" aria-label="rose"></button><button type="button" class="zm-preset" data-zm-preset="orange" style="--c:#EA580C" aria-label="orange"></button><button type="button" class="zm-preset" data-zm-preset="emerald" style="--c:#059669" aria-label="emerald"></button><button type="button" class="zm-preset" data-zm-preset="cyan" style="--c:#0891B2" aria-label="cyan"></button></div>
+    <div class="fw-bold small mb-2">الوضع</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-theme="light"><i class="bi bi-sun me-1"></i>فاتح</button><button type="button" class="btn btn-light" data-zm-set-theme="dark"><i class="bi bi-moon-stars me-1"></i>داكن</button></div>
+    <div class="fw-bold small mb-2">الاتجاه</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-dir="rtl">عربي RTL</button><button type="button" class="btn btn-light" data-zm-set-dir="ltr">إنجليزي LTR</button></div>
+    <div class="fw-bold small mb-2">القائمة الجانبية</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-sidebar="expanded">موسعة</button><button type="button" class="btn btn-light" data-zm-set-sidebar="collapsed">مطوية</button></div>
+    <button type="button" class="btn btn-soft-danger w-100" data-zm-reset><i class="bi bi-arrow-counterclockwise me-1"></i>إعادة الضبط</button>
+    <p class="small text-muted mt-3 mb-0">تُحفظ اختياراتك في هذا المتصفح.</p>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تسجيل الدخول | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="">
+<div class="zm-auth">
+  <div class="zm-auth-form position-relative">
+    <div class="zm-auth-tools">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+    </div>
+    <div class="zm-auth-inner">
+      <a href="index.html" class="d-inline-flex align-items-center gap-2 mb-5 fw-bold fs-4 text-reset"><img src="logo-mark.svg" alt="" width="40" height="40">مرصاد</a>
+      <h1 class="h3 mb-1">مرحبًا بعودتك</h1>
+      <p class="text-muted mb-4">سجّل الدخول لمتابعة أعمالك من لوحة التحكم.</p>
+      <div class="row g-2 mb-4">
+        <div class="col-6"><button type="button" class="zm-social-btn"><i class="bi bi-google"></i> Google</button></div>
+        <div class="col-6"><button type="button" class="zm-social-btn"><i class="bi bi-microsoft"></i> Microsoft</button></div>
+      </div>
+      <div class="zm-divider mb-4">أو باستخدام البريد</div>
+      <form class="needs-validation" novalidate data-zm-demo="تم تسجيل الدخول بنجاح" data-zm-redirect="index.html">
+        <div class="mb-3"><label class="form-label" for="lEmail">البريد الإلكتروني</label><input class="form-control" id="lEmail" type="email" dir="ltr" placeholder="name@example.com" required autocomplete="email"><div class="invalid-feedback">أدخل بريدًا إلكترونيًا صحيحًا</div></div>
+        <div class="mb-3"><div class="d-flex justify-content-between"><label class="form-label" for="lPass">كلمة المرور</label><a href="forgot-password.html" class="small fw-medium">نسيت كلمة المرور؟</a></div>
+          <div class="zm-pass-wrap"><input class="form-control" id="lPass" type="password" required minlength="6" autocomplete="current-password"><button type="button" class="zm-pass-toggle" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button><div class="invalid-feedback">كلمة المرور مطلوبة (6 أحرف على الأقل)</div></div></div>
+        <div class="form-check mb-4"><input class="form-check-input" type="checkbox" id="remember"><label class="form-check-label" for="remember">تذكرني على هذا الجهاز</label></div>
+        <button class="btn btn-primary w-100 py-2" type="submit">تسجيل الدخول</button>
+      </form>
+      <p class="text-center text-muted small mt-4 mb-0">ليس لديك حساب؟ <a href="register.html" class="fw-bold">أنشئ حسابًا جديدًا</a></p>
+    </div>
+  </div>
+  <div class="zm-auth-art">
+    <div class="zm-pattern"></div>
+    <div class="zm-auth-float">
+      <div class="zm-auth-card mb-3" style="max-width:340px">
+        <div class="d-flex align-items-center justify-content-between mb-2"><span class="small opacity-75">إيرادات هذا الشهر</span><span class="badge bg-success ltr-num">+12.4%</span></div>
+        <div class="fs-3 fw-bold"><span class="ltr-num">482,650 <small class="fs-6 fw-normal">SAR</small></span></div>
+        <svg viewBox="0 0 300 60" class="w-100 mt-2" aria-hidden="true"><path d="M0,50 C30,44 50,30 80,34 C110,38 130,18 160,20 C190,22 210,8 240,12 C260,14 280,6 300,4" fill="none" stroke="#5EEAD4" stroke-width="3"/></svg>
+      </div>
+      <div class="zm-auth-card d-flex align-items-center gap-3" style="max-width:280px;margin-inline-start:auto">
+        <span class="zm-kpi-icon" style="background:rgba(255,255,255,.15);color:#fff"><i class="bi bi-people"></i></span>
+        <div><div class="small opacity-75">عملاء جدد اليوم</div><div class="fs-5 fw-bold"><span class="ltr-num">+248</span></div></div>
+      </div>
+    </div>
+    <div class="position-relative" style="max-width:460px">
+      <h2 class="mb-3">أدِر أعمالك بثقة من لوحة واحدة</h2>
+      <p class="opacity-75 mb-0">تقارير لحظية، إدارة للعملاء والطلبات والفواتير، وتجربة عربية أصيلة تدعم الاتجاهين والوضع الداكن.</p>
+    </div>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

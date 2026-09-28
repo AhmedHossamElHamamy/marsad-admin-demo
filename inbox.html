@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>البريد الوارد | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<aside class="zm-sidebar" id="zmSidebar" aria-label="القائمة الجانبية">
+  <a class="zm-brand" href="index.html"><img src="logo-mark.svg" alt="" width="38" height="38"><span class="zm-brand-text">مرصاد<small>MIRSAD ADMIN</small></span></a>
+  <nav class="zm-nav" aria-label="القائمة الرئيسية">
+<div class="zm-nav-title">الرئيسية</div>
+<a class="zm-nav-link" href="index.html"><i class="bi bi-grid-1x2"></i><span>لوحة التحليلات</span></a>
+<a class="zm-nav-link" href="ecommerce.html"><i class="bi bi-bag-check"></i><span>التجارة الإلكترونية</span></a>
+<a class="zm-nav-link" href="crm.html"><i class="bi bi-kanban"></i><span>إدارة العملاء</span></a>
+<div class="zm-nav-title">المتجر</div>
+<a class="zm-nav-link" href="orders.html"><i class="bi bi-cart3"></i><span>الطلبات</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">24</span></a>
+<a class="zm-nav-link" href="order-detail.html"><i class="bi bi-truck"></i><span>تفاصيل الطلب</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-products" role="button" aria-expanded="false" aria-controls="nav-products"><i class="bi bi-box-seam"></i><span>المنتجات</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-products"><div class="zm-subnav">
+<a class="zm-nav-link" href="products.html"><span>قائمة المنتجات</span></a>
+<a class="zm-nav-link" href="product-add.html"><span>إضافة منتج</span></a>
+</div></div>
+<a class="zm-nav-link" href="customers.html"><i class="bi bi-people"></i><span>العملاء</span></a>
+<div class="zm-nav-title">التطبيقات</div>
+<a class="zm-nav-link active" href="inbox.html" aria-current="page"><i class="bi bi-envelope"></i><span>البريد الوارد</span><span class="badge rounded-pill zm-nav-badge bg-danger">12</span></a>
+<a class="zm-nav-link" href="chat.html"><i class="bi bi-chat-dots"></i><span>المحادثات</span></a>
+<a class="zm-nav-link" href="calendar.html"><i class="bi bi-calendar3"></i><span>التقويم</span></a>
+<a class="zm-nav-link" href="projects.html"><i class="bi bi-list-check"></i><span>المشاريع والمهام</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">جديد</span></a>
+<a class="zm-nav-link" href="file-manager.html"><i class="bi bi-folder2-open"></i><span>مدير الملفات</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-invoices" role="button" aria-expanded="false" aria-controls="nav-invoices"><i class="bi bi-receipt"></i><span>الفواتير</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-invoices"><div class="zm-subnav">
+<a class="zm-nav-link" href="invoices.html"><span>قائمة الفواتير</span></a>
+<a class="zm-nav-link" href="invoice-detail.html"><span>تفاصيل الفاتورة</span></a>
+<a class="zm-nav-link" href="invoice-create.html"><span>إنشاء فاتورة</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-users" role="button" aria-expanded="false" aria-controls="nav-users"><i class="bi bi-person-gear"></i><span>المستخدمون</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-users"><div class="zm-subnav">
+<a class="zm-nav-link" href="users.html"><span>قائمة المستخدمين</span></a>
+<a class="zm-nav-link" href="profile.html"><span>الملف الشخصي</span></a>
+</div></div>
+<a class="zm-nav-link" href="employees.html"><i class="bi bi-person-badge"></i><span>الموارد البشرية</span></a>
+<div class="zm-nav-title">الصفحات</div>
+<a class="zm-nav-link" href="settings.html"><i class="bi bi-gear"></i><span>الإعدادات</span></a>
+<a class="zm-nav-link" href="notifications.html"><i class="bi bi-bell"></i><span>الإشعارات</span></a>
+<a class="zm-nav-link" href="activity-log.html"><i class="bi bi-clock-history"></i><span>سجل النشاط</span></a>
+<a class="zm-nav-link" href="email-templates.html"><i class="bi bi-envelope-paper"></i><span>قوالب البريد</span></a>
+<a class="zm-nav-link" href="pricing.html"><i class="bi bi-tags"></i><span>الأسعار والباقات</span></a>
+<a class="zm-nav-link" href="faq.html"><i class="bi bi-question-circle"></i><span>مركز المساعدة</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-auth" role="button" aria-expanded="false" aria-controls="nav-auth"><i class="bi bi-shield-lock"></i><span>المصادقة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-auth"><div class="zm-subnav">
+<a class="zm-nav-link" href="login.html"><span>تسجيل الدخول</span></a>
+<a class="zm-nav-link" href="register.html"><span>إنشاء حساب</span></a>
+<a class="zm-nav-link" href="forgot-password.html"><span>استعادة كلمة المرور</span></a>
+<a class="zm-nav-link" href="lock-screen.html"><span>شاشة القفل</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-errors" role="button" aria-expanded="false" aria-controls="nav-errors"><i class="bi bi-exclamation-octagon"></i><span>صفحات خاصة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-errors"><div class="zm-subnav">
+<a class="zm-nav-link" href="404.html"><span>خطأ 404</span></a>
+<a class="zm-nav-link" href="500.html"><span>خطأ 500</span></a>
+<a class="zm-nav-link" href="maintenance.html"><span>صيانة</span></a>
+<a class="zm-nav-link" href="coming-soon.html"><span>قريبًا</span></a>
+</div></div>
+<a class="zm-nav-link" href="blank.html"><i class="bi bi-file-earmark"></i><span>صفحة فارغة</span></a>
+<div class="zm-nav-title">واجهة المستخدم</div>
+<a class="zm-nav-link" href="ui-kit.html"><i class="bi bi-palette"></i><span>مكونات الواجهة</span></a>
+<a class="zm-nav-link" href="tables.html"><i class="bi bi-table"></i><span>الجداول</span></a>
+<a class="zm-nav-link" href="charts.html"><i class="bi bi-bar-chart-line"></i><span>الرسوم البيانية</span></a>
+  </nav>
+  <div class="zm-sidebar-footer">
+    <div class="zm-upgrade">
+      <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars text-warning"></i><strong class="text-white">الباقة الاحترافية</strong></div>
+      <div class="progress zm-progress-thin mb-2" role="progressbar" aria-label="المساحة المستخدمة" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:72%;background:#2DD4BF"></div></div>
+      <div class="d-flex justify-content-between small"><span>المساحة المستخدمة</span><span class="ltr-num">72%</span></div>
+    </div>
+  </div>
+</aside>
+<div class="zm-backdrop" aria-hidden="true"></div>
+<div class="zm-main">
+  <header class="zm-topbar">
+    <button class="zm-icon-btn" type="button" data-zm-toggle="sidebar" aria-label="إظهار أو إخفاء القائمة" aria-controls="zmSidebar"><i class="bi bi-list"></i></button>
+    <div class="zm-search" role="search">
+      <i class="bi bi-search"></i>
+      <input id="zmSearch" type="search" class="form-control" placeholder="ابحث عن صفحة..." aria-label="بحث سريع" autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" title="تبديل الاتجاه واللغة" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" title="الوضع الداكن / الفاتح" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+      <div class="dropdown zm-hide-xs">
+        <button class="zm-icon-btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="الإشعارات"><i class="bi bi-bell"></i><span class="zm-dot"></span></button>
+        <div class="dropdown-menu dropdown-menu-end zm-notif-list">
+          <div class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom"><strong>الإشعارات</strong><span class="badge bg-soft-primary rounded-pill">4 جديدة</span></div>
+          <a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-primary" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-bag-check"></i></span><span class="min-w-0"><span class="d-block fw-bold small">طلب جديد #10248</span><span class="d-block small text-muted">من متجر لؤلؤة الخليج</span><span class="d-block fs-7 text-muted">قبل 5 دقائق</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-accent" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-person-plus"></i></span><span class="min-w-0"><span class="d-block fw-bold small">انضم عضو جديد</span><span class="d-block small text-muted">ريم الدوسري انضمت إلى فريق المبيعات</span><span class="d-block fs-7 text-muted">قبل 40 دقيقة</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-warning" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-exclamation-triangle"></i></span><span class="min-w-0"><span class="d-block fw-bold small">مخزون منخفض</span><span class="d-block small text-muted">كرسي مكتبي مريح — بقي 4 قطع</span><span class="d-block fs-7 text-muted">قبل ساعتين</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-success" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-receipt"></i></span><span class="min-w-0"><span class="d-block fw-bold small">تم سداد فاتورة</span><span class="d-block small text-muted">الفاتورة INV-2031 بقيمة 8,400 ر.س</span><span class="d-block fs-7 text-muted">أمس</span></span></a>
+          <a href="#" class="d-block text-center py-2 small fw-bold">عرض كل الإشعارات</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="zm-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="قائمة الحساب">
+          <span class="avatar avatar-sm avatar-solid" style="--av:#3B82F6" aria-hidden="true">س‌ق</span>
+          <span class="zm-user-meta d-none d-md-block text-start lh-sm"><span class="d-block fw-bold small" data-no-i18n>سارة القحطاني</span><span class="d-block fs-7 text-muted">مديرة النظام</span></span>
+          <i class="bi bi-chevron-down fs-7 text-muted d-none d-md-inline"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-credit-card me-2"></i>الفوترة</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="zm-content" id="main">
+    <div class="zm-page-header">
+      <div>
+        <h1>البريد الوارد</h1>
+        <nav aria-label="مسار التنقل"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li><li class="breadcrumb-item active" aria-current="page">البريد الوارد</li></ol></nav>
+      </div>
+      
+    </div>
+    <div class="row g-3 g-xl-4">
+      <div class="col-xl-3">
+        <div class="card h-100"><div class="card-body">
+          <button class="btn btn-primary w-100 mb-3" type="button" data-bs-toggle="modal" data-bs-target="#composeModal"><i class="bi bi-pencil-square me-1"></i> رسالة جديدة</button>
+          <nav class="nav flex-column zm-mail-folders gap-1 mb-4">
+<a class="nav-link active" href="#"><i class="bi bi-inbox"></i><span class="flex-grow-1">الوارد</span><span class="badge rounded-pill bg-soft-primary ltr-num">12</span></a>
+<a class="nav-link" href="#"><i class="bi bi-star"></i><span class="flex-grow-1">المميزة بنجمة</span></a>
+<a class="nav-link" href="#"><i class="bi bi-send"></i><span class="flex-grow-1">المرسلة</span></a>
+<a class="nav-link" href="#"><i class="bi bi-file-earmark"></i><span class="flex-grow-1">المسودات</span><span class="badge rounded-pill bg-soft-primary ltr-num">3</span></a>
+<a class="nav-link" href="#"><i class="bi bi-exclamation-octagon"></i><span class="flex-grow-1">البريد المزعج</span></a>
+<a class="nav-link" href="#"><i class="bi bi-trash"></i><span class="flex-grow-1">المحذوفات</span></a>
+          </nav>
+          <div class="zm-section-title">التصنيفات</div>
+          <nav class="nav flex-column zm-mail-folders">
+<a class="nav-link" href="#"><span class="zm-legend-dot" style="background:#0A7F72"></span>العمل</a>
+<a class="nav-link" href="#"><span class="zm-legend-dot" style="background:#6C5CE7"></span>العملاء</a>
+<a class="nav-link" href="#"><span class="zm-legend-dot" style="background:#F59E0B"></span>الفواتير</a>
+<a class="nav-link" href="#"><span class="zm-legend-dot" style="background:#E5484D"></span>شخصي</a>
+          </nav>
+        </div></div>
+      </div>
+      <div class="col-xl-9">
+        <div class="card overflow-hidden">
+          <div class="zm-app-shell">
+            <div class="zm-app-aside">
+              <div class="p-3 border-bottom"><div class="zm-search mw-100"><i class="bi bi-search"></i><input type="search" class="form-control form-control-sm" id="mailSearch" placeholder="ابحث في الرسائل..." aria-label="بحث في الرسائل"></div></div>
+              <div class="zm-scroll" id="mailList">
+              <div class="zm-mail-item unread active" role="button" tabindex="0" data-i="0">
+                <span class="avatar avatar-sm" style="--av:#F59E0B" aria-hidden="true">ع‌ز</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>عبدالله الزهراني</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>10:24 ص</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>مراجعة عرض السعر للمرحلة الثانية</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>أرفقت لك النسخة المحدثة من عرض السعر بعد إضافة ملاحظات الفريق...</div>
+                </div>
+                <i class="bi bi-star-fill text-warning fs-7"></i>
+              </div>
+              <div class="zm-mail-item unread" role="button" tabindex="0" data-i="1">
+                <span class="avatar avatar-sm" style="--av:#64748B" aria-hidden="true">ف‌م</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>فريق مرصاد</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>9:02 ص</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>تقرير الأداء الأسبوعي جاهز</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>ارتفعت الإيرادات بنسبة 12% مقارنة بالأسبوع الماضي، وإليك أبرز المؤشرات...</div>
+                </div>
+                
+              </div>
+              <div class="zm-mail-item" role="button" tabindex="0" data-i="2">
+                <span class="avatar avatar-sm" style="--av:#F97316" aria-hidden="true">ل‌م</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>ليلى المصري</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>أمس</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>موعد ورشة تصميم الواجهات</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>هل يناسبكم يوم الثلاثاء القادم الساعة 11 صباحًا لعقد ورشة العمل؟</div>
+                </div>
+                <i class="bi bi-star-fill text-warning fs-7"></i>
+              </div>
+              <div class="zm-mail-item" role="button" tabindex="0" data-i="3">
+                <span class="avatar avatar-sm" style="--av:#0EA5E9" aria-hidden="true">م‌ل</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>متاجر لؤلؤة الخليج</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>أمس</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>تأكيد استلام الطلب #10248</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>نشكركم على سرعة التنفيذ، تم استلام الشحنة بحالة ممتازة...</div>
+                </div>
+                
+              </div>
+              <div class="zm-mail-item" role="button" tabindex="0" data-i="4">
+                <span class="avatar avatar-sm" style="--av:#0EA5E9" aria-hidden="true">م‌ب</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>مريم البلوشي</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>10 سبتمبر</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>اقتراح لتحسين صفحة الدفع</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>لاحظت أن نسبة إكمال الدفع تنخفض في الخطوة الثالثة، أقترح...</div>
+                </div>
+                
+              </div>
+              <div class="zm-mail-item" role="button" tabindex="0" data-i="5">
+                <span class="avatar avatar-sm" style="--av:#6C5CE7" aria-hidden="true">ب‌خ</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>بدر الخالدي</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>9 سبتمبر</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>فاتورة الاستضافة لشهر سبتمبر</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>مرفق فاتورة الاستضافة السحابية، يرجى السداد قبل نهاية الشهر.</div>
+                </div>
+                
+              </div>
+              <div class="zm-mail-item" role="button" tabindex="0" data-i="6">
+                <span class="avatar avatar-sm" style="--av:#16A34A" aria-hidden="true">ش‌ج</span>
+                <div class="min-w-0 flex-grow-1">
+                  <div class="d-flex justify-content-between gap-2"><span class="fw-bold small text-truncate" data-no-i18n>شهد الجهني</span><span class="fs-7 text-muted text-nowrap" data-no-i18n>8 سبتمبر</span></div>
+                  <div class="zm-mail-subject small text-truncate" data-no-i18n>دعوة: إطلاق النسخة الجديدة</div>
+                  <div class="fs-7 text-muted text-truncate" data-no-i18n>يسعدنا دعوتكم لحضور إطلاق النسخة الجديدة من المنصة...</div>
+                </div>
+                
+              </div>
+              </div>
+            </div>
+            <div class="zm-app-body">
+              <div class="d-flex align-items-center gap-2 p-3 border-bottom">
+                <button class="btn btn-light btn-sm btn-icon" type="button" data-bs-toggle="tooltip" data-bs-title="أرشفة"><i class="bi bi-archive"></i></button>
+                <button class="btn btn-light btn-sm btn-icon" type="button" data-bs-toggle="tooltip" data-bs-title="تمييز كغير مقروءة"><i class="bi bi-envelope"></i></button>
+                <button class="btn btn-light btn-sm btn-icon" type="button" data-bs-toggle="tooltip" data-bs-title="حذف"><i class="bi bi-trash"></i></button>
+                <span class="ms-auto fs-7 text-muted"><span class="ltr-num">1–7</span> من <span class="ltr-num">128</span></span>
+              </div>
+              <div class="zm-scroll p-4" id="mailView">
+                <h2 class="h5 mb-3" id="mvSubject" data-no-i18n>مراجعة عرض السعر للمرحلة الثانية</h2>
+                <div class="d-flex align-items-center gap-3 mb-4">
+                  <span id="mvAvatar"><span class="avatar" style="--av:#F59E0B" aria-hidden="true">ع‌ز</span></span>
+                  <div class="flex-grow-1"><div class="fw-bold" id="mvFrom" data-no-i18n>عبدالله الزهراني</div><div class="fs-7 text-muted">إلى: أنا</div></div>
+                  <span class="fs-7 text-muted" id="mvTime" data-no-i18n>10:24 ص</span>
+                </div>
+                <div class="lh-lg" id="mvBody" data-no-i18n>
+                  <p>مرحبًا سارة،</p>
+                  <p id="mvPreview">أرفقت لك النسخة المحدثة من عرض السعر بعد إضافة ملاحظات الفريق...</p>
+                  <p>تضمنت التعديلات تحديث الجدول الزمني للمشروع ليصبح ستة أسابيع بدلًا من ثمانية، مع إضافة مرحلة اختبار قبول المستخدم وتوضيح نطاق الدعم الفني بعد الإطلاق.</p>
+                  <p>يسعدني تلقي ملاحظاتكم قبل نهاية الأسبوع حتى نتمكن من اعتماد العرض وبدء التنفيذ.</p>
+                  <p>مع خالص التحية،</p>
+                </div>
+                <div class="d-flex flex-wrap gap-2 my-4">
+                  <div class="border rounded-3 p-2 d-flex align-items-center gap-2 small"><i class="bi bi-file-earmark-pdf fs-4 text-danger"></i><div><div class="fw-bold"><span class="ltr-num">proposal-v2.pdf</span></div><div class="fs-7 text-muted"><span class="ltr-num">1.4 MB</span></div></div></div>
+                  <div class="border rounded-3 p-2 d-flex align-items-center gap-2 small"><i class="bi bi-file-earmark-spreadsheet fs-4 text-success"></i><div><div class="fw-bold"><span class="ltr-num">timeline.xlsx</span></div><div class="fs-7 text-muted"><span class="ltr-num">86 KB</span></div></div></div>
+                </div>
+                <div class="border rounded-4 p-3">
+                  <textarea class="form-control border-0 shadow-none p-0 mb-2" rows="3" placeholder="اكتب ردك هنا..." aria-label="الرد"></textarea>
+                  <div class="d-flex justify-content-between align-items-center"><button class="btn btn-light btn-sm btn-icon" type="button" aria-label="إرفاق ملف"><i class="bi bi-paperclip"></i></button><button class="btn btn-primary btn-sm" type="button" onclick="Mirsad.toast('تم إرسال الرد')"><i class="bi bi-reply me-1"></i> إرسال الرد</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="composeModal" tabindex="-1" aria-labelledby="composeTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content">
+        <form class="needs-validation" novalidate data-zm-demo="تم إرسال الرسالة">
+          <div class="modal-header"><h5 class="modal-title" id="composeTitle">رسالة جديدة</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button></div>
+          <div class="modal-body">
+            <div class="mb-3"><label class="form-label" for="mTo">إلى</label><input class="form-control" id="mTo" type="email" dir="ltr" required><div class="invalid-feedback">أدخل بريد المستلم</div></div>
+            <div class="mb-3"><label class="form-label" for="mSub">الموضوع</label><input class="form-control" id="mSub" required><div class="invalid-feedback">أدخل موضوع الرسالة</div></div>
+            <div><label class="form-label" for="mBody">نص الرسالة</label><textarea class="form-control" id="mBody" rows="6" required></textarea><div class="invalid-feedback">اكتب نص الرسالة</div></div>
+          </div>
+          <div class="modal-footer"><button type="button" class="btn btn-light" data-bs-dismiss="modal">حفظ كمسودة</button><button type="submit" class="btn btn-primary"><i class="bi bi-send me-1"></i> إرسال</button></div>
+        </form>
+      </div></div>
+    </div>
+  </main>
+  <footer class="zm-footer">
+    <span>© <span data-zm-year>2026</span> مرصاد — جميع الحقوق محفوظة</span>
+    <span>صُمم بعناية للمشاريع العربية <i class="bi bi-heart-fill text-danger"></i></span>
+  </footer>
+</div>
+<button class="zm-customizer-fab" type="button" data-bs-toggle="offcanvas" data-bs-target="#zmCustomizer" aria-controls="zmCustomizer" aria-label="تخصيص الألوان والوضع والاتجاه"><i class="bi bi-palette2"></i></button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="zmCustomizer" aria-labelledby="zmCustomizerTitle" style="width:320px">
+  <div class="offcanvas-header border-bottom"><h5 class="offcanvas-title" id="zmCustomizerTitle">تخصيص الواجهة</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button></div>
+  <div class="offcanvas-body">
+    <div class="fw-bold small mb-2">لون الواجهة</div><div class="zm-presets mb-4"><button type="button" class="zm-preset" data-zm-preset="teal" style="--c:#0A7F72" aria-label="teal"></button><button type="button" class="zm-preset" data-zm-preset="blue" style="--c:#2563EB" aria-label="blue"></button><button type="button" class="zm-preset" data-zm-preset="indigo" style="--c:#4F46E5" aria-label="indigo"></button><button type="button" class="zm-preset" data-zm-preset="violet" style="--c:#7C3AED" aria-label="violet"></button><button type="button" class="zm-preset" data-zm-preset="rose" style="--c:#E11D48" aria-label="rose"></button><button type="button" class="zm-preset" data-zm-preset="orange" style="--c:#EA580C" aria-label="orange"></button><button type="button" class="zm-preset" data-zm-preset="emerald" style="--c:#059669" aria-label="emerald"></button><button type="button" class="zm-preset" data-zm-preset="cyan" style="--c:#0891B2" aria-label="cyan"></button></div>
+    <div class="fw-bold small mb-2">الوضع</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-theme="light"><i class="bi bi-sun me-1"></i>فاتح</button><button type="button" class="btn btn-light" data-zm-set-theme="dark"><i class="bi bi-moon-stars me-1"></i>داكن</button></div>
+    <div class="fw-bold small mb-2">الاتجاه</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-dir="rtl">عربي RTL</button><button type="button" class="btn btn-light" data-zm-set-dir="ltr">إنجليزي LTR</button></div>
+    <div class="fw-bold small mb-2">القائمة الجانبية</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-sidebar="expanded">موسعة</button><button type="button" class="btn btn-light" data-zm-set-sidebar="collapsed">مطوية</button></div>
+    <button type="button" class="btn btn-soft-danger w-100" data-zm-reset><i class="bi bi-arrow-counterclockwise me-1"></i>إعادة الضبط</button>
+    <p class="small text-muted mt-3 mb-0">تُحفظ اختياراتك في هذا المتصفح.</p>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  <script src="inbox.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

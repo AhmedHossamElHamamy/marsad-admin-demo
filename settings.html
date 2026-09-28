@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>الإعدادات | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<aside class="zm-sidebar" id="zmSidebar" aria-label="القائمة الجانبية">
+  <a class="zm-brand" href="index.html"><img src="logo-mark.svg" alt="" width="38" height="38"><span class="zm-brand-text">مرصاد<small>MIRSAD ADMIN</small></span></a>
+  <nav class="zm-nav" aria-label="القائمة الرئيسية">
+<div class="zm-nav-title">الرئيسية</div>
+<a class="zm-nav-link" href="index.html"><i class="bi bi-grid-1x2"></i><span>لوحة التحليلات</span></a>
+<a class="zm-nav-link" href="ecommerce.html"><i class="bi bi-bag-check"></i><span>التجارة الإلكترونية</span></a>
+<a class="zm-nav-link" href="crm.html"><i class="bi bi-kanban"></i><span>إدارة العملاء</span></a>
+<div class="zm-nav-title">المتجر</div>
+<a class="zm-nav-link" href="orders.html"><i class="bi bi-cart3"></i><span>الطلبات</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">24</span></a>
+<a class="zm-nav-link" href="order-detail.html"><i class="bi bi-truck"></i><span>تفاصيل الطلب</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-products" role="button" aria-expanded="false" aria-controls="nav-products"><i class="bi bi-box-seam"></i><span>المنتجات</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-products"><div class="zm-subnav">
+<a class="zm-nav-link" href="products.html"><span>قائمة المنتجات</span></a>
+<a class="zm-nav-link" href="product-add.html"><span>إضافة منتج</span></a>
+</div></div>
+<a class="zm-nav-link" href="customers.html"><i class="bi bi-people"></i><span>العملاء</span></a>
+<div class="zm-nav-title">التطبيقات</div>
+<a class="zm-nav-link" href="inbox.html"><i class="bi bi-envelope"></i><span>البريد الوارد</span><span class="badge rounded-pill zm-nav-badge bg-danger">12</span></a>
+<a class="zm-nav-link" href="chat.html"><i class="bi bi-chat-dots"></i><span>المحادثات</span></a>
+<a class="zm-nav-link" href="calendar.html"><i class="bi bi-calendar3"></i><span>التقويم</span></a>
+<a class="zm-nav-link" href="projects.html"><i class="bi bi-list-check"></i><span>المشاريع والمهام</span><span class="badge rounded-pill zm-nav-badge bg-soft-primary">جديد</span></a>
+<a class="zm-nav-link" href="file-manager.html"><i class="bi bi-folder2-open"></i><span>مدير الملفات</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-invoices" role="button" aria-expanded="false" aria-controls="nav-invoices"><i class="bi bi-receipt"></i><span>الفواتير</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-invoices"><div class="zm-subnav">
+<a class="zm-nav-link" href="invoices.html"><span>قائمة الفواتير</span></a>
+<a class="zm-nav-link" href="invoice-detail.html"><span>تفاصيل الفاتورة</span></a>
+<a class="zm-nav-link" href="invoice-create.html"><span>إنشاء فاتورة</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-users" role="button" aria-expanded="false" aria-controls="nav-users"><i class="bi bi-person-gear"></i><span>المستخدمون</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-users"><div class="zm-subnav">
+<a class="zm-nav-link" href="users.html"><span>قائمة المستخدمين</span></a>
+<a class="zm-nav-link" href="profile.html"><span>الملف الشخصي</span></a>
+</div></div>
+<a class="zm-nav-link" href="employees.html"><i class="bi bi-person-badge"></i><span>الموارد البشرية</span></a>
+<div class="zm-nav-title">الصفحات</div>
+<a class="zm-nav-link active" href="settings.html" aria-current="page"><i class="bi bi-gear"></i><span>الإعدادات</span></a>
+<a class="zm-nav-link" href="notifications.html"><i class="bi bi-bell"></i><span>الإشعارات</span></a>
+<a class="zm-nav-link" href="activity-log.html"><i class="bi bi-clock-history"></i><span>سجل النشاط</span></a>
+<a class="zm-nav-link" href="email-templates.html"><i class="bi bi-envelope-paper"></i><span>قوالب البريد</span></a>
+<a class="zm-nav-link" href="pricing.html"><i class="bi bi-tags"></i><span>الأسعار والباقات</span></a>
+<a class="zm-nav-link" href="faq.html"><i class="bi bi-question-circle"></i><span>مركز المساعدة</span></a>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-auth" role="button" aria-expanded="false" aria-controls="nav-auth"><i class="bi bi-shield-lock"></i><span>المصادقة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-auth"><div class="zm-subnav">
+<a class="zm-nav-link" href="login.html"><span>تسجيل الدخول</span></a>
+<a class="zm-nav-link" href="register.html"><span>إنشاء حساب</span></a>
+<a class="zm-nav-link" href="forgot-password.html"><span>استعادة كلمة المرور</span></a>
+<a class="zm-nav-link" href="lock-screen.html"><span>شاشة القفل</span></a>
+</div></div>
+<a class="zm-nav-link" data-bs-toggle="collapse" href="#nav-errors" role="button" aria-expanded="false" aria-controls="nav-errors"><i class="bi bi-exclamation-octagon"></i><span>صفحات خاصة</span><i class="bi bi-chevron-down zm-caret"></i></a>
+<div class="collapse" id="nav-errors"><div class="zm-subnav">
+<a class="zm-nav-link" href="404.html"><span>خطأ 404</span></a>
+<a class="zm-nav-link" href="500.html"><span>خطأ 500</span></a>
+<a class="zm-nav-link" href="maintenance.html"><span>صيانة</span></a>
+<a class="zm-nav-link" href="coming-soon.html"><span>قريبًا</span></a>
+</div></div>
+<a class="zm-nav-link" href="blank.html"><i class="bi bi-file-earmark"></i><span>صفحة فارغة</span></a>
+<div class="zm-nav-title">واجهة المستخدم</div>
+<a class="zm-nav-link" href="ui-kit.html"><i class="bi bi-palette"></i><span>مكونات الواجهة</span></a>
+<a class="zm-nav-link" href="tables.html"><i class="bi bi-table"></i><span>الجداول</span></a>
+<a class="zm-nav-link" href="charts.html"><i class="bi bi-bar-chart-line"></i><span>الرسوم البيانية</span></a>
+  </nav>
+  <div class="zm-sidebar-footer">
+    <div class="zm-upgrade">
+      <div class="d-flex align-items-center gap-2 mb-2"><i class="bi bi-stars text-warning"></i><strong class="text-white">الباقة الاحترافية</strong></div>
+      <div class="progress zm-progress-thin mb-2" role="progressbar" aria-label="المساحة المستخدمة" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width:72%;background:#2DD4BF"></div></div>
+      <div class="d-flex justify-content-between small"><span>المساحة المستخدمة</span><span class="ltr-num">72%</span></div>
+    </div>
+  </div>
+</aside>
+<div class="zm-backdrop" aria-hidden="true"></div>
+<div class="zm-main">
+  <header class="zm-topbar">
+    <button class="zm-icon-btn" type="button" data-zm-toggle="sidebar" aria-label="إظهار أو إخفاء القائمة" aria-controls="zmSidebar"><i class="bi bi-list"></i></button>
+    <div class="zm-search" role="search">
+      <i class="bi bi-search"></i>
+      <input id="zmSearch" type="search" class="form-control" placeholder="ابحث عن صفحة..." aria-label="بحث سريع" autocomplete="off">
+      <kbd>/</kbd>
+    </div>
+    <div class="ms-auto d-flex align-items-center gap-2">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" title="تبديل الاتجاه واللغة" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" title="الوضع الداكن / الفاتح" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+      <div class="dropdown zm-hide-xs">
+        <button class="zm-icon-btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false" aria-label="الإشعارات"><i class="bi bi-bell"></i><span class="zm-dot"></span></button>
+        <div class="dropdown-menu dropdown-menu-end zm-notif-list">
+          <div class="d-flex align-items-center justify-content-between px-3 py-2 border-bottom"><strong>الإشعارات</strong><span class="badge bg-soft-primary rounded-pill">4 جديدة</span></div>
+          <a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-primary" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-bag-check"></i></span><span class="min-w-0"><span class="d-block fw-bold small">طلب جديد #10248</span><span class="d-block small text-muted">من متجر لؤلؤة الخليج</span><span class="d-block fs-7 text-muted">قبل 5 دقائق</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-accent" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-person-plus"></i></span><span class="min-w-0"><span class="d-block fw-bold small">انضم عضو جديد</span><span class="d-block small text-muted">ريم الدوسري انضمت إلى فريق المبيعات</span><span class="d-block fs-7 text-muted">قبل 40 دقيقة</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-warning" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-exclamation-triangle"></i></span><span class="min-w-0"><span class="d-block fw-bold small">مخزون منخفض</span><span class="d-block small text-muted">كرسي مكتبي مريح — بقي 4 قطع</span><span class="d-block fs-7 text-muted">قبل ساعتين</span></span></a>
+<a href="#" class="zm-notif-item"><span class="zm-kpi-icon bg-soft-success" style="width:38px;height:38px;font-size:1rem"><i class="bi bi-receipt"></i></span><span class="min-w-0"><span class="d-block fw-bold small">تم سداد فاتورة</span><span class="d-block small text-muted">الفاتورة INV-2031 بقيمة 8,400 ر.س</span><span class="d-block fs-7 text-muted">أمس</span></span></a>
+          <a href="#" class="d-block text-center py-2 small fw-bold">عرض كل الإشعارات</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="zm-user-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="قائمة الحساب">
+          <span class="avatar avatar-sm avatar-solid" style="--av:#3B82F6" aria-hidden="true">س‌ق</span>
+          <span class="zm-user-meta d-none d-md-block text-start lh-sm"><span class="d-block fw-bold small" data-no-i18n>سارة القحطاني</span><span class="d-block fs-7 text-muted">مديرة النظام</span></span>
+          <i class="bi bi-chevron-down fs-7 text-muted d-none d-md-inline"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="profile.html"><i class="bi bi-person me-2"></i>الملف الشخصي</a></li>
+          <li><a class="dropdown-item" href="settings.html"><i class="bi bi-gear me-2"></i>الإعدادات</a></li>
+          <li><a class="dropdown-item" href="invoices.html"><i class="bi bi-credit-card me-2"></i>الفوترة</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right me-2"></i>تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <main class="zm-content" id="main">
+    <div class="zm-page-header">
+      <div>
+        <h1>الإعدادات</h1>
+        <nav aria-label="مسار التنقل"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li><li class="breadcrumb-item active" aria-current="page">الإعدادات</li></ol></nav>
+      </div>
+      
+    </div>
+    <div class="row g-3 g-xl-4">
+      <div class="col-lg-3">
+        <div class="card"><div class="card-body p-2">
+          <nav class="nav nav-pills flex-column gap-1" role="tablist" aria-orientation="vertical">
+            <button class="nav-link text-start active" data-bs-toggle="pill" data-bs-target="#s-account" type="button" role="tab" aria-controls="s-account" aria-selected="true"><i class="bi bi-person me-2"></i>الحساب</button>
+            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#s-security" type="button" role="tab" aria-controls="s-security" aria-selected="false"><i class="bi bi-shield-lock me-2"></i>الأمان</button>
+            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#s-notif" type="button" role="tab" aria-controls="s-notif" aria-selected="false"><i class="bi bi-bell me-2"></i>الإشعارات</button>
+            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#s-appearance" type="button" role="tab" aria-controls="s-appearance" aria-selected="false"><i class="bi bi-palette me-2"></i>المظهر</button>
+            <button class="nav-link text-start" data-bs-toggle="pill" data-bs-target="#s-billing" type="button" role="tab" aria-controls="s-billing" aria-selected="false"><i class="bi bi-credit-card me-2"></i>الفوترة</button>
+          </nav>
+        </div></div>
+      </div>
+      <div class="col-lg-9 tab-content">
+        <div class="tab-pane fade show active" id="s-account" role="tabpanel">
+          <div class="card">
+            <div class="card-header"><div><h2 class="card-title">معلومات الحساب</h2><span class="small text-muted">حدّث بياناتك الشخصية ومعلومات التواصل</span></div></div>
+            <div class="card-body pt-0">
+              <form class="needs-validation" novalidate data-zm-demo="تم حفظ بيانات الحساب">
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                  <span class="avatar avatar-xl avatar-solid" style="--av:#3B82F6" aria-hidden="true">س‌ق</span>
+                  <div><label class="btn btn-sm btn-primary mb-1" for="avatarUp"><i class="bi bi-upload me-1"></i>رفع صورة</label><input type="file" id="avatarUp" class="d-none" accept="image/*"> <button type="button" class="btn btn-sm btn-light mb-1">إزالة</button><div class="fs-7 text-muted">PNG أو JPG بحد أقصى 2 ميجابايت</div></div>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6"><label class="form-label" for="fn">الاسم الأول</label><input class="form-control" id="fn" value="سارة" required><div class="invalid-feedback">الاسم الأول مطلوب</div></div>
+                  <div class="col-md-6"><label class="form-label" for="ln">اسم العائلة</label><input class="form-control" id="ln" value="القحطاني" required><div class="invalid-feedback">اسم العائلة مطلوب</div></div>
+                  <div class="col-md-6"><label class="form-label" for="em">البريد الإلكتروني</label><input class="form-control" id="em" type="email" value="sara@example.com" dir="ltr" required><div class="invalid-feedback">أدخل بريدًا إلكترونيًا صحيحًا</div></div>
+                  <div class="col-md-6"><label class="form-label" for="ph">رقم الجوال</label><input class="form-control" id="ph" type="tel" dir="ltr" placeholder="05XXXXXXXX" pattern="05[0-9]{8}" required><div class="invalid-feedback">أدخل رقم جوال صحيحًا يبدأ بـ 05 ويتكون من 10 أرقام</div></div>
+                  <div class="col-md-6"><label class="form-label" for="co">الدولة</label><select class="form-select" id="co" required><option value="">اختر الدولة...</option><option selected>السعودية</option><option>الإمارات</option><option>الكويت</option><option>قطر</option><option>البحرين</option><option>عُمان</option><option>مصر</option><option>الأردن</option><option>المغرب</option></select><div class="invalid-feedback">اختر الدولة</div></div>
+                  <div class="col-md-6"><label class="form-label" for="tz">المنطقة الزمنية</label><select class="form-select" id="tz"><option>(GMT+3) الرياض</option><option>(GMT+4) دبي</option><option>(GMT+2) القاهرة</option></select></div>
+                  <div class="col-12"><label class="form-label" for="bio">نبذة مختصرة</label><textarea class="form-control" id="bio" rows="3" maxlength="200">مديرة منتجات بخبرة تزيد على 8 سنوات في بناء المنصات الرقمية.</textarea><div class="form-text">بحد أقصى 200 حرف.</div></div>
+                </div>
+                <div class="d-flex gap-2 justify-content-end mt-4"><button type="reset" class="btn btn-light">إلغاء</button><button type="submit" class="btn btn-primary">حفظ التغييرات</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="s-security" role="tabpanel">
+          <div class="card mb-3 mb-xl-4">
+            <div class="card-header"><div><h2 class="card-title">تغيير كلمة المرور</h2><span class="small text-muted">استخدم 8 أحرف على الأقل مع أرقام ورموز</span></div></div>
+            <div class="card-body pt-0">
+              <form class="needs-validation" novalidate id="passForm" data-zm-demo="تم تحديث كلمة المرور">
+                <div class="row g-3">
+                  <div class="col-12"><label class="form-label" for="curPass">كلمة المرور الحالية</label><div class="zm-pass-wrap"><input class="form-control" id="curPass" type="password" required autocomplete="current-password"><button type="button" class="zm-pass-toggle" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button><div class="invalid-feedback">أدخل كلمة المرور الحالية</div></div></div>
+                  <div class="col-md-6"><label class="form-label" for="newPass">كلمة المرور الجديدة</label><div class="zm-pass-wrap"><input class="form-control" id="newPass" type="password" required minlength="8" autocomplete="new-password"><button type="button" class="zm-pass-toggle" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button><div class="invalid-feedback">يجب ألا تقل عن 8 أحرف</div></div>
+                    <div class="progress mt-2" style="height:5px" role="progressbar" aria-label="قوة كلمة المرور"><div class="progress-bar" id="passStrength" style="width:0%"></div></div><div class="fs-7 text-muted mt-1" id="passStrengthText">قوة كلمة المرور</div></div>
+                  <div class="col-md-6"><label class="form-label" for="confPass">تأكيد كلمة المرور</label><div class="zm-pass-wrap"><input class="form-control" id="confPass" type="password" required autocomplete="new-password"><button type="button" class="zm-pass-toggle" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button><div class="invalid-feedback">كلمتا المرور غير متطابقتين</div></div></div>
+                </div>
+                <div class="d-flex justify-content-end mt-4"><button type="submit" class="btn btn-primary">تحديث كلمة المرور</button></div>
+              </form>
+            </div>
+          </div>
+          <div class="card mb-3 mb-xl-4"><div class="card-body d-flex flex-wrap gap-3 align-items-center">
+            <span class="zm-kpi-icon bg-soft-accent"><i class="bi bi-phone-vibrate"></i></span>
+            <div class="flex-grow-1"><div class="fw-bold">التحقق بخطوتين</div><div class="small text-muted">أضف طبقة حماية إضافية عبر تطبيق المصادقة.</div></div>
+            <div class="form-check form-switch fs-5 mb-0"><input class="form-check-input" type="checkbox" role="switch" id="twofa" aria-label="تفعيل التحقق بخطوتين"></div>
+          </div></div>
+          <div class="card">
+            <div class="card-header"><h2 class="card-title">الجلسات النشطة</h2></div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3"><i class="bi bi-laptop fs-4 text-muted"></i><div class="flex-grow-1"><div class="fw-medium">Chrome — Windows</div><div class="fs-7 text-muted"><span data-no-i18n>الرياض</span> · الجلسة الحالية</div></div><span class="badge bg-soft-success">نشط الآن</span></li>
+              <li class="list-group-item d-flex align-items-center gap-3 px-4 py-3"><i class="bi bi-phone fs-4 text-muted"></i><div class="flex-grow-1"><div class="fw-medium">Safari — iPhone</div><div class="fs-7 text-muted"><span data-no-i18n>جدة</span> · قبل ساعتين</div></div><button class="btn btn-sm btn-soft-danger" type="button">إنهاء</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="s-notif" role="tabpanel">
+          <div class="card">
+            <div class="card-header"><div><h2 class="card-title">تفضيلات الإشعارات</h2><span class="small text-muted">اختر القنوات التي تصلك عبرها التنبيهات</span></div></div>
+            <div class="table-responsive"><table class="table align-middle">
+              <thead><tr><th>نوع الإشعار</th><th class="text-center">البريد</th><th class="text-center">المتصفح</th><th class="text-center">الجوال</th></tr></thead>
+              <tbody>
+                <tr><td class="fw-medium">طلبات جديدة</td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="بريد: طلبات جديدة" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="المتصفح: طلبات جديدة" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="الجوال: طلبات جديدة"></div></td></tr>
+                <tr><td class="fw-medium">رسائل العملاء</td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="بريد: رسائل العملاء" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="المتصفح: رسائل العملاء" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="الجوال: رسائل العملاء" checked></div></td></tr>
+                <tr><td class="fw-medium">تقارير أسبوعية</td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="بريد: تقارير أسبوعية" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="المتصفح: تقارير أسبوعية"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="الجوال: تقارير أسبوعية"></div></td></tr>
+                <tr><td class="fw-medium">تنبيهات الأمان</td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="بريد: تنبيهات الأمان" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="المتصفح: تنبيهات الأمان" checked></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="الجوال: تنبيهات الأمان" checked></div></td></tr>
+                <tr><td class="fw-medium">عروض وتحديثات المنتج</td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="بريد: عروض وتحديثات المنتج"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="المتصفح: عروض وتحديثات المنتج"></div></td>
+                  <td class="text-center"><div class="form-check form-switch d-inline-block"><input class="form-check-input" type="checkbox" role="switch" aria-label="الجوال: عروض وتحديثات المنتج"></div></td></tr>
+              </tbody></table></div>
+            <div class="card-body d-flex justify-content-end"><button class="btn btn-primary" type="button" onclick="Mirsad.toast('تم حفظ تفضيلات الإشعارات')">حفظ التفضيلات</button></div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="s-appearance" role="tabpanel">
+          <div class="card">
+            <div class="card-header"><div><h2 class="card-title">المظهر والاتجاه</h2><span class="small text-muted">تُطبق التغييرات فورًا وتُحفظ في متصفحك</span></div></div>
+            <div class="card-body pt-0">
+              <div class="zm-section-title mt-2">وضع الألوان</div>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <input type="radio" class="btn-check" name="themeOpt" id="thLight" value="light"><label class="btn btn-light px-4" for="thLight"><i class="bi bi-sun me-1"></i> فاتح</label>
+                <input type="radio" class="btn-check" name="themeOpt" id="thDark" value="dark"><label class="btn btn-light px-4" for="thDark"><i class="bi bi-moon-stars me-1"></i> داكن</label>
+              </div>
+              <div class="zm-section-title">اتجاه الواجهة</div>
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <input type="radio" class="btn-check" name="dirOpt" id="dirRtl" value="rtl"><label class="btn btn-light px-4" for="dirRtl">من اليمين لليسار (عربي)</label>
+                <input type="radio" class="btn-check" name="dirOpt" id="dirLtr" value="ltr"><label class="btn btn-light px-4" for="dirLtr">Left to right (English)</label>
+              </div>
+              <div class="zm-section-title">اللون الأساسي (معاينة مباشرة)</div>
+              <div class="d-flex flex-wrap gap-2 mb-2" id="swatches"><button type="button" class="zm-swatch active" style="background:#0A7F72" data-color="#0A7F72" data-rgb="10, 127, 114" data-hover="#086A5F" aria-label="أخضر مزرق"></button><button type="button" class="zm-swatch" style="background:#5B4BD6" data-color="#5B4BD6" data-rgb="91, 75, 214" data-hover="#4A3BC0" aria-label="بنفسجي"></button><button type="button" class="zm-swatch" style="background:#2563EB" data-color="#2563EB" data-rgb="37, 99, 235" data-hover="#1D4ED8" aria-label="أزرق"></button><button type="button" class="zm-swatch" style="background:#C2410C" data-color="#C2410C" data-rgb="194, 65, 12" data-hover="#9A3412" aria-label="برتقالي"></button><button type="button" class="zm-swatch" style="background:#BE185D" data-color="#BE185D" data-rgb="190, 24, 93" data-hover="#9D174D" aria-label="وردي"></button><button type="button" class="zm-swatch" style="background:#334155" data-color="#334155" data-rgb="51, 65, 85" data-hover="#1E293B" aria-label="رمادي"></button></div>
+              <div class="fs-7 text-muted">لتثبيت اللون نهائيًا عدّل المتغير <code>--zm-primary</code> في ملف <code>assets/css/app.css</code>.</div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="s-billing" role="tabpanel">
+          <div class="card mb-3 mb-xl-4"><div class="card-body d-flex flex-wrap gap-3 align-items-center">
+            <span class="zm-kpi-icon bg-soft-primary"><i class="bi bi-gem"></i></span>
+            <div class="flex-grow-1"><div class="fw-bold">الباقة الاحترافية</div><div class="small text-muted">تتجدد في <span data-no-i18n>1 أكتوبر 2026</span> — <span class="ltr-num">299</span> <small class="text-muted">ر.س</small> / شهريًا</div></div>
+            <a href="pricing.html" class="btn btn-soft-primary">تغيير الباقة</a>
+          </div></div>
+          <div class="card"><div class="card-body d-flex flex-wrap gap-3 align-items-center">
+            <span class="zm-kpi-icon bg-soft-info"><i class="bi bi-credit-card-2-front"></i></span>
+            <div class="flex-grow-1"><div class="fw-bold">وسيلة الدفع</div><div class="small text-muted"><span class="ltr-num">•••• •••• •••• 4242</span></div></div>
+            <a href="invoices.html" class="btn btn-light">سجل الفواتير</a>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="zm-footer">
+    <span>© <span data-zm-year>2026</span> مرصاد — جميع الحقوق محفوظة</span>
+    <span>صُمم بعناية للمشاريع العربية <i class="bi bi-heart-fill text-danger"></i></span>
+  </footer>
+</div>
+<button class="zm-customizer-fab" type="button" data-bs-toggle="offcanvas" data-bs-target="#zmCustomizer" aria-controls="zmCustomizer" aria-label="تخصيص الألوان والوضع والاتجاه"><i class="bi bi-palette2"></i></button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="zmCustomizer" aria-labelledby="zmCustomizerTitle" style="width:320px">
+  <div class="offcanvas-header border-bottom"><h5 class="offcanvas-title" id="zmCustomizerTitle">تخصيص الواجهة</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="إغلاق"></button></div>
+  <div class="offcanvas-body">
+    <div class="fw-bold small mb-2">لون الواجهة</div><div class="zm-presets mb-4"><button type="button" class="zm-preset" data-zm-preset="teal" style="--c:#0A7F72" aria-label="teal"></button><button type="button" class="zm-preset" data-zm-preset="blue" style="--c:#2563EB" aria-label="blue"></button><button type="button" class="zm-preset" data-zm-preset="indigo" style="--c:#4F46E5" aria-label="indigo"></button><button type="button" class="zm-preset" data-zm-preset="violet" style="--c:#7C3AED" aria-label="violet"></button><button type="button" class="zm-preset" data-zm-preset="rose" style="--c:#E11D48" aria-label="rose"></button><button type="button" class="zm-preset" data-zm-preset="orange" style="--c:#EA580C" aria-label="orange"></button><button type="button" class="zm-preset" data-zm-preset="emerald" style="--c:#059669" aria-label="emerald"></button><button type="button" class="zm-preset" data-zm-preset="cyan" style="--c:#0891B2" aria-label="cyan"></button></div>
+    <div class="fw-bold small mb-2">الوضع</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-theme="light"><i class="bi bi-sun me-1"></i>فاتح</button><button type="button" class="btn btn-light" data-zm-set-theme="dark"><i class="bi bi-moon-stars me-1"></i>داكن</button></div>
+    <div class="fw-bold small mb-2">الاتجاه</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-dir="rtl">عربي RTL</button><button type="button" class="btn btn-light" data-zm-set-dir="ltr">إنجليزي LTR</button></div>
+    <div class="fw-bold small mb-2">القائمة الجانبية</div><div class="btn-group w-100 mb-4" role="group"><button type="button" class="btn btn-light" data-zm-set-sidebar="expanded">موسعة</button><button type="button" class="btn btn-light" data-zm-set-sidebar="collapsed">مطوية</button></div>
+    <button type="button" class="btn btn-soft-danger w-100" data-zm-reset><i class="bi bi-arrow-counterclockwise me-1"></i>إعادة الضبط</button>
+    <p class="small text-muted mt-3 mb-0">تُحفظ اختياراتك في هذا المتصفح.</p>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+  <script src="settings.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>

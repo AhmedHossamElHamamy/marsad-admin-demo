@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شاشة القفل | مرصاد</title>
+  <meta name="description" content="قالب لوحة تحكم عربية RTL احترافية مبني على Bootstrap 5">
+  <meta name="theme-color" content="#0A7F72">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Tajawal font, bundled locally (SIL Open Font License 1.1) — works offline -->
+  <link rel="stylesheet" href="tajawal.css">
+  <!-- Bootstrap 5.3 (RTL build; init.js swaps it to the LTR build when needed) -->
+  <link id="bs-css" rel="stylesheet" href="bootstrap.rtl.min.css">
+  <script src="init.js"></script>
+  <link rel="stylesheet" href="bootstrap-icons.min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="">
+<div class="zm-error position-relative">
+  <div class="zm-auth-tools">
+      <button class="zm-icon-btn zm-lang-btn" type="button" data-zm-toggle="dir" aria-label="تبديل الاتجاه واللغة"><i class="bi bi-translate"></i><span class="zm-dir-label">EN</span></button>
+      <button class="zm-icon-btn" type="button" data-zm-toggle="theme" aria-label="تبديل الوضع الداكن"><i class="bi bi-moon-stars"></i></button>
+    </div>
+  <div class="card p-4 shadow-sm" style="max-width:400px;width:100%">
+    <div class="text-center">
+      <span class="avatar avatar-xl avatar-solid mb-3" style="--av:#3B82F6" aria-hidden="true">س‌ق</span>
+      <h1 class="h5 mb-1" data-no-i18n>سارة القحطاني</h1>
+      <p class="text-muted small mb-4">الشاشة مقفلة. أدخل كلمة المرور للمتابعة.</p>
+    </div>
+    <form class="needs-validation" novalidate data-zm-demo="تم فتح القفل" data-zm-redirect="index.html">
+      <div class="zm-pass-wrap mb-3"><input class="form-control" type="password" required minlength="6" aria-label="كلمة المرور" placeholder="••••••••" autocomplete="current-password"><button type="button" class="zm-pass-toggle" aria-label="إظهار كلمة المرور"><i class="bi bi-eye"></i></button><div class="invalid-feedback">كلمة المرور مطلوبة (6 أحرف على الأقل)</div></div>
+      <button class="btn btn-primary w-100" type="submit"><i class="bi bi-unlock me-1"></i> فتح القفل</button>
+    </form>
+    <p class="text-center small mt-3 mb-0"><a href="login.html">لست أنت؟ سجّل الدخول بحساب آخر</a></p>
+  </div>
+</div>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+<div id="demo-watermark" dir="rtl" style="position:fixed;bottom:12px;left:12px;z-index:2147483000;background:rgba(17,24,39,.82);color:#fff;font:600 12px/1.4 system-ui,Tahoma,sans-serif;padding:6px 12px;border-radius:999px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.25)">نسخة عرض — المنتج الكامل على بيكاليكا</div>
+</body>
+</html>
